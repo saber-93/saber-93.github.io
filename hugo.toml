@@ -1,0 +1,31 @@
+baseURL = "https://saber-93.github.io/"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+languageCode = "en"
+title = "Gallery"
+
+[params]
+  defaultTheme = "dark"
+  description = "A photo gallery"
+  title = "Gallery"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 82
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[module]
+  [[module.imports]]
+    path = "github.com/nicokaiser/hugo-theme-gallery/v4"
+
+[services]
+  [services.rss]
+    limit = 100
